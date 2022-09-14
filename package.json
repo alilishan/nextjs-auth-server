@@ -3,15 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port=3001",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start --port=3001",
+    "lint": "next lint",
+    "studio": "npx prisma studio",
+    "migrate": "prisma migrate dev --name init"
   },
   "dependencies": {
+    "@prisma/client": "^4.3.1",
     "@svgr/webpack": "^6.3.1",
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^5.2.0",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
     "next": "12.2.5",
+    "otp-generator": "^4.0.0",
+    "prisma": "^4.3.1",
+    "raw-loader": "^4.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.54.7"

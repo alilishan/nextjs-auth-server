@@ -7,11 +7,11 @@ const Home = () => {
     return (
         <div>
             <Head>
-                <title>NextJS Stater Pack</title>
+                <title>Auth Server</title>
             </Head>
             <div className="container text-center py-6">
-                <h1 className="display-6">NextJS Starter App</h1>
-                <p className="lead">Package to quickly set up Next.js project with Sass, Bootstrap and SVG.</p>
+                <h1 className="display-6">Auth Server</h1>
+                <p className="lead"></p>
 
                 <hr className="dashed"/>
 

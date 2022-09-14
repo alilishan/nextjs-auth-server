@@ -11,6 +11,16 @@ const nextConfig = {
 			use: ['@svgr/webpack'],
 		})
 
+		config.module.rules.push({
+			test: /\.key$/i,
+			use: ['raw-loader'],
+		})
+
+		config.module.rules.push({
+			test: /\.pub$/i,
+			use: ['raw-loader'],
+		})
+
 		return config
 	},
 

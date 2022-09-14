@@ -1,32 +1,32 @@
 
-## NextJs Starter Pack
+## Auth Server
+Based on Private Key and Public Key JWT
 
-### Packages Included
-* Basic: Next, React, ReactDom
-* Sass
-* Bootstrap
-* @svgr/webpack
+### ToDo
+* ~~Auth (Sign In and get Auth Token)~~
+* ~~Create User~~
+* Blacklist (Logout) User
+* Update User
+* Delete User
+* Permissions?
 
-### Develop
-First, run the development server:
+### Generate Keys
+Generate inside the `artifacts` folder
 
-```bash
-git clone https://github.com/alilishan/nextjs-starter-pack
+```
+ssh-keygen -t rsa -b 4096 -m PEM -f jwtRS256.key
+// Don't add passphrase
 
-# or
+openssl rsa -in jwtRS256.key -pubout -outform PEM -out jwtRS256.key.pub
 
-git clone https://github.com/alilishan/nextjs-starter-pack {YOUR PROJECT NAME}
-
-# cd into the folder
-npm i
-
-npm run dev
+cat jwtRS256.key
+cat jwtRS256.key.pub
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### References
+* https://github.com/auth0/node-jsonwebtoken#readme
+* https://github.com/cornflourblue/next-js-11-jwt-authentication-example
+* https://www.prisma.io/docs/concepts/components/prisma-client/crud
+* https://jasonwatmore.com/post/2021/08/20/next-js-api-add-middleware-to-api-routes-example-tutorial
+* https://www.npmjs.com/package/otp-generator
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
